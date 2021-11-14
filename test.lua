@@ -1,15 +1,6 @@
-function GenerateString(x)
-	local Letters = ('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'):split('')
-	local String = '' 
-	for i = 1, x do 
-		String = String..Letters[random(1, #Letters)]
-	end 
-	return String 
-end
-
 local finity = {}
-finity.TipName = 'Bee Swarm 3.0'
-finity.TipID = GenerateString(16)
+finity.TipName = 'lol'
+finity.TipID = "FinityUi"
 finity.checkbox_cache = {}
 
 finity.theme = { -- light
