@@ -40,6 +40,9 @@ main:Button("Unequip Team", function()
     func("unequip pet")
 end)
 
+main:Toggle('Instant Collect', {flag = 'instant'})
+main:Toggle('Collect Rewards', {flag = 'rew'})
+
 main:Button("Refresh Team",function()
     table.clear(pets)
     for i, v in next, getgc(true) do if type(v) == "table" and rawget(v, "uid") and tostring(v.owner) == tostring(game:GetService("Players").LocalPlayer) then table.insert(pets, v.uid) end end
@@ -53,4 +56,23 @@ end)
 
 main:Button("https://discord.gg/9vG8UJXuNf", function()
     setclipboard("https://discord.gg/9vG8UJXuNf")
+end)
+
+spawn(function()
+    while wait() do
+       if main.flags.instant then
+            for i,v in pairs(game:GetService("Workspace")["__THINGS"].Orbs:GetChildren()) do
+                local A_1 = { 
+                    [1] = { 
+                        [1] = v.Name 
+                    } 
+                } 
+                local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"]["claim orbs"]
+                Event:FireServer(A_1)
+            end    
+        end
+        if main.flags.rew then
+                local A_1 = {} local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"]["redeem rank rewards"] Event:InvokeServer(A_1)
+        end
+    end
 end)
