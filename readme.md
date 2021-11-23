@@ -10,8 +10,7 @@
 </h2>
 <h2 align = "center">About Me</h2>
 
-I'm programming in Lua, learning Java. I will be glad if you join both of my discord servers. Main language is Russian, know English at school level. Trying to become popular.<br>
-_Как я уже выше написал, я русскоговорящий, именно поэтому вы можете общаться со мной на русском_
+Any information about me you can find at my github profile [link](https://github.com/not-weuz/)
 
 <h2 align = "center">Information</h2>
 <p>Deobfuscating and leaking my projects is prohibited. If you were able to deobfuscate, then be kind, do not leak the code anywhere</p>
