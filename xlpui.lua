@@ -14,7 +14,10 @@ finity author:
     w3uz @ v3rmillion.net					
 --]]
 
-
+cache.name = "xlpUI"
+if shared.framename then
+	cache.name = shared.framename
+end
 
 local xlp = {}
 xlp.gs = {}
@@ -138,7 +141,7 @@ function xlp.new(isdark, gprojectName, thinProject)
 	local self2 = xlpObject
 	local self = xlp
 
-	if not xlp.gs["RunService"]:IsStudio() and self.gs["CoreGui"]:FindFirstChild("xlpUI") then
+	if not xlp.gs["RunService"]:IsStudio() and self.gs["CoreGui"]:FindFirstChild(cache.name) then
 		warn("xlp:", "instance already exists in coregui!")
 		
 		return
@@ -214,7 +217,7 @@ function xlp.new(isdark, gprojectName, thinProject)
 	end)
 
 	self2.userinterface = self:Create("ScreenGui", {
-		Name = "xlpUI",
+		Name = cache.name,
 		ZIndexBehavior = Enum.ZIndexBehavior.Global,
 		ResetOnSpawn = false,
 	})
