@@ -14,7 +14,7 @@ finity author:
     w3uz @ v3rmillion.net					
 --]]
 
-cache.name = "xlpUI"
+local cache.name = "xlpUI"
 if shared.framename then
 	cache.name = shared.framename
 end
