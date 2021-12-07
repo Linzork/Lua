@@ -17,6 +17,8 @@ finity author:
 local cachename = "xlpUI"
 if shared.framename then
 	cachename = shared.framename
+else
+	shared.framename = cachename
 end
 
 local xlp = {}
